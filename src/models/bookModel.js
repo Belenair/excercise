@@ -3,7 +3,7 @@ const { v4: uuid } = require("uuid");
 let books = [
   {
     id: uuid(),
-    title: "First movie",
+    title: "First book",
     author: "Samo Chalupka",
     genre: "Poezia",
     publishedYear: "1864",
@@ -19,7 +19,7 @@ let books = [
   },
   {
     id: uuid(),
-    title: "Third movie",
+    title: "Third book",
     author: "Samo Chalupka3",
     genre: "Linguistika",
     publishedYear: "2064",
@@ -27,7 +27,7 @@ let books = [
   },
   {
     id: uuid(),
-    title: "Forth movie",
+    title: "Forth book",
     author: "Samo Chalupka4",
     genre: "Kucharske recepty",
     publishedYear: "2164",
@@ -35,7 +35,7 @@ let books = [
   },
   {
     id: uuid(),
-    title: "Fifth movie",
+    title: "Fifth book",
     author: "Samo Chalupka5",
     genre: "Psychologia",
     publishedYear: "1764",
@@ -83,7 +83,7 @@ const deleteBook = (id) => {
 module.exports = {
   getAllBooks,
   getBookById,
-  creteBook,
+  createBook,
   updateBook,
   deleteBook,
 };
