@@ -49,8 +49,8 @@ const updateBook = (req, res) => {
 const deleteBook = (req, res) => {
     const { id } = req.param;
     const deleted = bookModel.deleteBook(id);
-    id (!deleted) {
-        return res.status(404).send({ message: 'Knoha nebola najdena! '});
+    if (!deleted) {
+        return res.status(404).send({ message: 'Kniha nebola najdena! '});
     }
     res.send({ message: 'Kniha bola uspesne zmazana! '});
 };
