@@ -19,5 +19,9 @@
     "url": "https://github.com/Belenair/excercise/issues"
   },
   "homepage": "https://github.com/Belenair/excercise#readme",
-  "private": "true"
+  "private": "true",
+  "dependencies": {
+    "express": "^5.2.1",
+    "nodemon": "^3.1.14"
+  }
 }

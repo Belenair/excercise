@@ -2,7 +2,7 @@ const bookModel = require('../models/bookModel.js')
 
 const getAllBooks = (req, res) => {
     const { sort } = req.query;
-    let books = bookMomode.getAllBooks();
+    let books = bookModel.getAllBooks();
     if (sort) {
         if (!books.length || !books[0].hasOwnProperty(sort)) {
             return res.status(400).send({ message: 'Neplatny parameter sort' });
