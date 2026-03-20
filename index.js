@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
 app.use('/movies', moviesRouter);
 app.use('/books', bookRouter);
 
-app.get("*", (req, res) => {
+app.use((req, res) => {
     res.status(404).send({ message: "Umss! Nieco sa nepodarilo!" });
 });
 

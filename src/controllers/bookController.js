@@ -27,16 +27,16 @@ const getBooksById = (req, res) => {
 };
 
 const createBook = (req, res) => {
-    const { title, author, genre, publishedYear, sumary } = req.body;
+    const { title, author, genre, publishedYear, summary } = req.body;
     if (!title || !author || !genre || !publishedYear ) {
         return res.status(400).send ({ message: 'Chybaju udaje o knihe!' });
     }
-    const newBook = bookModel.createBook({ title, author, genre, publishedYear, sumary });
-    res.stauts(201).send(newBook);
+    const newBook = bookModel.createBook({ title, author, genre, publishedYear, summary });
+    res.status(201).send(newBook);
 };
 
 const updateBook = (req, res) => {
-    const { id } = req.param;
+    const { id } = req.params;
     const updates = req.body;
 
     const updatedBook = bookModel.updateBook(id, updates);
@@ -47,7 +47,7 @@ const updateBook = (req, res) => {
 };
 
 const deleteBook = (req, res) => {
-    const { id } = req.param;
+    const { id } = req.params;
     const deleted = bookModel.deleteBook(id);
     if (!deleted) {
         return res.status(404).send({ message: 'Kniha nebola najdena! '});

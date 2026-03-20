@@ -65,7 +65,7 @@ const updateBook = (id, { title, author, genre, publishedYear, summary }) => {
   if(title) book.title = title;
   if(author) book.author = author;
   if(genre) book.genre = genre;
-  if(publishedYear) book.publishedYear = publisherYear;
+  if(publishedYear) book.publishedYear = publishedYear;
   if(summary) book.summary = summary;
 
   return { ok: true, message: "Book updated!", data: book};
